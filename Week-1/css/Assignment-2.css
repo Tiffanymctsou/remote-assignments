@@ -1,0 +1,165 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+
+header {
+  background-color: #ffd306;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+ul {
+    padding: 0px;
+}
+
+nav {
+    text-align: right;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav a {
+  color: white;
+  display: block;
+  font-size: 1.2rem;
+  padding: 15px;
+  margin: auto;
+  text-decoration: none;
+}
+
+h2 {
+  margin: 30px;
+}
+
+#webtitle {
+  float: left;
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+#logo {
+  float: left;
+  padding: 20px;
+}
+
+.webname {
+  display: inline-block;
+}
+
+.navbar {
+  float: right;
+}
+
+.banner {
+  background: url(../img/banner_sky.jpeg) no-repeat;
+  background-size: cover;
+  padding: 200px;
+  text-align: center;
+}
+
+#greeting {
+  font-size: 5em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, .8);
+}
+
+.main-content {
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    max-width: 1200px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Box Layout */
+.content-box li{
+  background-color: #003D79;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 5px;
+  list-style: none;
+  text-align: center;
+  position: inherit;
+  width: 1200px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #FFFFFF;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, .8)
+}
+
+#box1,
+#box2,
+#box3,
+#box4 {
+  width: 46.5%;
+  display: flex;
+  justify-content: center;
+}
+
+#box1,
+#box3 {
+  float: left;
+}
+
+#box2,
+#box4 {
+  float: right;
+}
+
+/* Box Content */
+#box1 {
+  background: url(../img/taiwan.jpg) no-repeat;
+  background-size: cover;
+}
+
+#box2 {
+  background: url(../img/china.jpeg) no-repeat;
+  background-size: cover
+}
+
+#box3 {
+  background: url(../img/swis.jpg) no-repeat;
+  background-size: cover;
+}
+
+#box4 {
+  background: url(../img/southpole.jpg) no-repeat;
+  background-size: cover;
+}
+
+/*	Float Clearfix */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Call to Action */
+.callaction {
+ margin-top: 30px;
+ display: flex;
+ justify-content: center;
+}
+
+.button {
+ background-color: #ffd306;
+ padding: 15px 32px;
+ text-decoration: none;
+ text-align: center;
+ font-size: 16px;
+ color: white;
+}
