@@ -7,13 +7,21 @@ function countAandB(input) {
   } return count
 }
 
+// function toNumber(input) {
+//   var letters = [];
+//   for (var i = 0; i < input.length; i++) {
+//     letters += parseInt(input[i], 36) - 9;
+//     var answer = letters.split('').map(Number); //spilt element and convert into numbers
+//   }
+//   return answer
+// }
+
 function toNumber(input) {
-  var letters = [];
-  for (var i = 0; i < input.length; i++) {
-    letters += parseInt(input[i], 36) - 9;
-    var answer = letters.split('').map(Number); //spilt element and convert into numbers
-  }
-  return answer
+  let letters = [];
+  for(let i = 0; i < input.length; i++) {
+    let num = input[i].charCodeAt(0) - 96;
+    letters.push(num);
+  } return letters;
 }
 
 let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
