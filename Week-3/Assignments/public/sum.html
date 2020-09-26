@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>AppWorks School #12</title>
+    </head>
+    <body>
+        <div>
+            <h1>Let's Calculate!</h1>
+                <label>Please enter a number:</label>
+                <input type="number" id="input" value="">
+                <button id="submit" type="submit" onclick="sendResult()">Submit</button>
+        </div>
+        <div>
+            <h2>The result is:</h2>
+            <h3 id="result"></h3>
+        </div>
+        <div>
+            <script>
+                function sendResult() {
+                    const isNum = document.getElementById("input").value;
+                    let xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            document.getElementById("result").innerHTML = xhr.responseText;
+                        };
+                    }
+                xhr.open("GET", `/getData?number=${isNum}`);
+                xhr.send();
+                }
+            </script>
+        </div>
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Week-3 Assignment-3</title>
+</head>
+<body>
+    <h1 id="total"></h1>
+        <input type="number" id="numipt" value="Enter a Number">
+        <button type="button" onclick="CountSum()">Get Summation</button>
+
+    <script>
+        function CountSum() {
+            const numipt = document.getElementById("numipt").value;
+            const url = `/getData?number=${numipt}`;
+
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4) {
+                    if (xhr.status === 200) {
+                        document.getElementById("total").innerHTML = xhr.responseText;
+                    } else {
+                        alert('There was a problem with the request.');
+                    }
+                }
+            }
+            xhr.open("GET", url,true);
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html> -->
