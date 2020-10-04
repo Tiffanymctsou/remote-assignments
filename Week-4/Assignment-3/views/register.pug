@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Join us!
+    p #{text}
+    form(action='/register' method='POST')
+        h3.content Register
+        label Email
+        br
+        input(name='email' type='text')
+        br
+        label Password
+        br
+        input(name='password' type='text') 
+        br
+        button(type='submit') Submit
+        br
+        a(href='login') Already a member?
